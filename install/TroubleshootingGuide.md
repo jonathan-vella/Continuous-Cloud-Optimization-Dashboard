@@ -19,6 +19,8 @@ The Continuous Cloud Optimization Power BI Dashboard development started about a
     - [Log Analytics REST API timeout (CCO Dashboard AKS add on only)](TroubleshootingGuide.md#log-analytics-rest-api-timeout-cco-dashboard-aks-add-on-only)
 
     - [Data Model Relationships missing](TroubleshootingGuide.md#data-model-relationships-missing)
+    
+    - [Errors regarding missing 'column1' on refresh](#errors-regarding-missing-column1-on-refresh)
 
 We will keep updating this list of known issues as soon as we get more feedback from the community....
    
@@ -99,6 +101,15 @@ The solution is to wait a few minutes and launch a new refresh.
 
 In some ocasions when having both Power BI Desktop versions installed on the computer we have seen the Data Relationship model to dissapear. If that happens you can use the following reference to manually reconfigure the relationship between tables. It should also help you to understand how we defined the Data Model in case you want to expand the default content
 
-![relationship model](/install/images/RelationshipsModel.PNG)
+Governance:
+
+![relationship model](/install/images/RelationshipsModelGovernance.PNG)
+
+Infrastructure:
+
+![relationship model](/install/images/RelationshipsModelInfrastructure.PNG)
 
 
+#### Errors regarding missing `column1` on refresh
+
+Try using a native user account to the AAD tenant you are connecting to instead of a guest user account.
